@@ -1,0 +1,15 @@
+安装方式全程通过命令提示符的方式（我们需要打开管理员的命令提示符，win10在左侧开始图标出右键——>管理员命令提示符）。即打开系统shell
+
+1.复制下面的命令在shell中复制后回车安装Chocolatey。
+@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+
+2.安装完成后，复制下列命令安装python。
+choco install python
+
+3.然后安装python的两个重要包，setuptools和pip。安装好之后可以很方便的加载其他的第三方python包。
+python -m pip install -U pip
+
+4.安装requests库：
+pip install requests
+
+到此，基本的环境已经搭建完毕。
